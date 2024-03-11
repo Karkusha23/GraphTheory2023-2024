@@ -2,26 +2,28 @@
 #include <vector>
 #include <string>
 
+typedef unsigned char uchar;
+
 class UnionFind
 {
-    std::vector<int> arr_;
+    std::vector<uchar> arr_;
 public:
-    UnionFind(int count) : arr_(count)
+    UnionFind(uchar count) : arr_(count)
     {
-        for (int i = 0; i < count; ++i)
+        for (uchar i = 0; i < count; ++i)
         {
             arr_[i] = i;
         }
     }
-    int parent(int val)
+    uchar parent(uchar val)
     {
         return arr_[val] == val ? val : arr_[val] = parent(arr_[val]);
     }
-    void unite(int first, int second)
+    void unite(uchar first, uchar second)
     {
         arr_[parent(first)] = parent(second);
     }
-    bool sameParent(int first, int second)
+    bool sameParent(uchar first, uchar second)
     {
         return parent(first) == parent(second);
     }
