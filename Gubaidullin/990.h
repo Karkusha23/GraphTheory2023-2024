@@ -44,10 +44,7 @@ public:
                 {
                     continue;
                 }
-                else
-                {
-                    return false;
-                }
+                return false;
             }
 
             if (str[1] == '=')
