@@ -36,9 +36,6 @@ public:
 
         for (std::string& str : equations)
         {
-            int first = str[0] - 'a';
-            int second = str[3] - 'a';
-
             if (str[0] == str[3])
             {
                 if (str[1] == '=')
