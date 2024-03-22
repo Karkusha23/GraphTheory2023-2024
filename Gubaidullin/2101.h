@@ -2,9 +2,9 @@
 #include <vector>
 #include <stack>
 
-typedef unsigned long long ull;
+typedef long long ll;
 
-ull distanceSqr(ull x1, ull y1, ull x2, ull y2)
+ll distanceSqr(ll x1, ll y1, ll x2, ll y2)
 {
     return (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2);
 }
@@ -23,13 +23,13 @@ public:
         {
             for (int j = i + 1; j < n; ++j)
             {
-                ull dist = distanceSqr(bombs[i][0], bombs[i][1], bombs[j][0], bombs[j][1]);
+                ll dist = distanceSqr(bombs[i][0], bombs[i][1], bombs[j][0], bombs[j][1]);
 
-                if ((ull)bombs[i][2] * (ull)bombs[i][2] >= dist)
+                if ((ll)bombs[i][2] * (ll)bombs[i][2] >= dist)
                 {
                     list[i].push_back(j);
                 }
-                if ((ull)bombs[j][2] * (ull)bombs[j][2] >= dist)
+                if ((ll)bombs[j][2] * (ll)bombs[j][2] >= dist)
                 {
                     list[j].push_back(i);
                 }
