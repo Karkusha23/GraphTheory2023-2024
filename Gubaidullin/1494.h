@@ -21,7 +21,6 @@ class Solution
         }
 
         int zeroDegrees = 0;
-        int zeroDegreesCount = 0;
 
         for (int i = 0; i < n; ++i)
         {
